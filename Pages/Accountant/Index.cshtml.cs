@@ -29,10 +29,10 @@ public class IndexModel : PageModel
         var startOfMonth = new DateTime(now.Year, now.Month, 1);
 
         // Monthly revenue
-        MonthlyRevenue = await _context.ServiceHistories
-            .Where(sh => sh.ServiceDate >= startOfMonth)
-            .SumAsync(sh => sh.TotalCost);
-
+        MonthlyRevenue = (decimal)await _context.ServiceHistories
+    .Where(sh => sh.ServiceDate >= startOfMonth)
+    .Select(sh => (double)sh.TotalCost)
+    .SumAsync();
         // Today's invoices
         TodayInvoices = await _context.ServiceHistories
             .CountAsync(sh => sh.ServiceDate.Date == now.Date);
