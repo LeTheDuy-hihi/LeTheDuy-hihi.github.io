@@ -7,8 +7,60 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="h4 mb-0">Quản Lý Nhân Viên</h2>
-    <a class="btn btn-dark" href="#">+ Thêm Nhân Viên</a>
+    <a class="btn btn-dark" asp-page="" asp-route-create="true">+ Thêm Nhân Viên</a>
 </div>
+
+@if (Model.IsEditing)
+{
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h5 class="card-title">@((string.IsNullOrEmpty(Model.Input.Id)) ? "Tạo nhân viên" : "Chỉnh sửa nhân viên")</h5>
+            <form method="post" asp-page-handler="@(string.IsNullOrEmpty(Model.Input.Id) ? "Create" : "Edit")" asp-route-id="@Model.Input.Id">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Họ và tên</label>
+                        <input asp-for="Input.FullName" class="form-control" />
+                        <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input asp-for="Input.Email" class="form-control" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Mật khẩu</label>
+                        <input asp-for="Input.Password" type="password" class="form-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        <div class="form-text">Để trống khi không muốn đổi mật khẩu.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Vai trò</label>
+                        <select asp-for="Input.Role" class="form-select">
+                            <option value="">-- Chọn vai trò --</option>
+                            @foreach (var role in Model.Roles)
+                            {
+                                if (role == Model.Input.Role)
+                                {
+                                    <option value="@role" selected>@role</option>
+                                }
+                                else
+                                {
+                                    <option value="@role">@role</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="Input.Role" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <a class="btn btn-secondary" href="@Url.Page(null)">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
 
 <div class="card shadow-sm border-0">
     <div class="table-responsive">
@@ -16,36 +68,38 @@
             <thead class="table-light">
                 <tr>
                     <th>Tên</th>
-                    <th>Chức vụ</th>
-                    <th>Điện thoại</th>
                     <th>Email</th>
+                    <th>Vai trò</th>
                     <th style="width: 160px;">Thao tác</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Nguyễn Văn Thợ</td>
-                    <td>Thợ chính</td>
-                    <td>0901234567</td>
-                    <td>tho@garage.com</td>
-                    <td>
-                        <a class="text-decoration-none" href="#">Sửa</a>
-                        <span class="mx-1">|</span>
-                        <a class="text-danger text-decoration-none" href="#">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Trần Thị Kế Toán</td>
-                    <td>Kế toán</td>
-                    <td>0902345678</td>
-                    <td>ketoan@garage.com</td>
-                    <td>
-                        <a class="text-decoration-none" href="#">Sửa</a>
-                        <span class="mx-1">|</span>
-                        <a class="text-danger text-decoration-none" href="#">Xóa</a>
-                    </td>
-                </tr>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.FullName</td>
+                        <td>@user.Email</td>
+                        <td>@(Model.UserRoles.GetValueOrDefault(user.Id, ""))</td>
+                        <td>
+                            <a class="text-decoration-none" asp-page="" asp-route-editId="@user.Id">Sửa</a>
+                            <span class="mx-1">|</span>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" class="d-inline">
+                                <button type="submit" class="btn btn-link p-0 text-danger" onclick="return confirm('Bạn có chắc muốn xóa người dùng này?');">Xóa</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Users.Any())
+                {
+                    <tr>
+                        <td colspan="4" class="text-center text-muted">Chưa có nhân viên nào</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

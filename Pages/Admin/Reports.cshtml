@@ -14,8 +14,17 @@
     <div class="col-md-4">
         <div class="card shadow-sm border-0 h-100">
             <div class="card-body">
-                <h5 class="card-title">Xe sửa nhiều nhất</h5>
-                <p class="card-text">Xe 29A-12345 (12 lần sửa)</p>
+                <h5 class="card-title">Xe sửa nhiều nhất tháng</h5>
+                <ul class="list-unstyled mb-0">
+                    @foreach (var item in Model.TopVehicles)
+                    {
+                        <li>@item.LicensePlate (@item.Count lần)</li>
+                    }
+                    @if (!Model.TopVehicles.Any())
+                    {
+                        <li class="text-muted">Chưa có dữ liệu</li>
+                    }
+                </ul>
             </div>
         </div>
     </div>
@@ -23,7 +32,7 @@
         <div class="card shadow-sm border-0 h-100">
             <div class="card-body">
                 <h5 class="card-title">Doanh thu tháng</h5>
-                <p class="card-text">120.000.000₫</p>
+                <p class="card-text">@Model.RevenueThisMonth.ToString("N0")₫</p>
             </div>
         </div>
     </div>
@@ -31,7 +40,7 @@
         <div class="card shadow-sm border-0 h-100">
             <div class="card-body">
                 <h5 class="card-title">Số khách hàng mới</h5>
-                <p class="card-text">45</p>
+                <p class="card-text">@Model.NewCustomersThisMonth</p>
             </div>
         </div>
     </div>

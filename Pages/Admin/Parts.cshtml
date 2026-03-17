@@ -7,8 +7,56 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="h4 mb-0">Phụ Tùng</h2>
-    <a class="btn btn-dark" href="#">+ Thêm Phụ Tùng</a>
+    <a class="btn btn-dark" asp-page="" asp-route-create="true">+ Thêm Phụ Tùng</a>
 </div>
+
+@if (Model.IsEditing)
+{
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h5 class="card-title">@((Model.InputPart.Id == 0) ? "Tạo phụ tùng" : "Chỉnh sửa phụ tùng")</h5>
+            <form method="post" asp-page-handler="@(Model.InputPart.Id == 0 ? "Create" : "Edit")" asp-route-id="@Model.InputPart.Id">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Tên phụ tùng</label>
+                        <input asp-for="InputPart.Name" class="form-control" />
+                        <span asp-validation-for="InputPart.Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Loại</label>
+                        <input asp-for="InputPart.Category" class="form-control" />
+                        <span asp-validation-for="InputPart.Category" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Số lượng</label>
+                        <input asp-for="InputPart.Quantity" class="form-control" />
+                        <span asp-validation-for="InputPart.Quantity" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Giá</label>
+                        <input asp-for="InputPart.Price" class="form-control" />
+                        <span asp-validation-for="InputPart.Price" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nhà cung cấp</label>
+                        <input asp-for="InputPart.Supplier" class="form-control" />
+                        <span asp-validation-for="InputPart.Supplier" class="text-danger"></span>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Mô tả</label>
+                        <textarea asp-for="InputPart.Description" class="form-control" rows="2"></textarea>
+                        <span asp-validation-for="InputPart.Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <a class="btn btn-secondary" href="@Url.Page(null)">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
 
 <div class="card shadow-sm border-0">
     <div class="table-responsive">
@@ -19,33 +67,37 @@
                     <th>Loại</th>
                     <th>Số lượng</th>
                     <th>Giá</th>
-                    <th style="width: 140px;">Thao tác</th>
+                    <th style="width: 160px;">Thao tác</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Lọc gió</td>
-                    <td>Bảo dưỡng</td>
-                    <td>50</td>
-                    <td>120.000₫</td>
-                    <td>
-                        <a class="text-decoration-none" href="#">Sửa</a>
-                        <span class="mx-1">|</span>
-                        <a class="text-danger text-decoration-none" href="#">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nhớt động cơ</td>
-                    <td>Thay thế</td>
-                    <td>28</td>
-                    <td>180.000₫</td>
-                    <td>
-                        <a class="text-decoration-none" href="#">Sửa</a>
-                        <span class="mx-1">|</span>
-                        <a class="text-danger text-decoration-none" href="#">Xóa</a>
-                    </td>
-                </tr>
+                @foreach (var part in Model.Parts)
+                {
+                    <tr>
+                        <td>@part.Name</td>
+                        <td>@part.Category</td>
+                        <td>@part.Quantity</td>
+                        <td>@part.Price.ToString("N0")₫</td>
+                        <td>
+                            <a class="text-decoration-none" asp-page="" asp-route-editId="@part.Id">Sửa</a>
+                            <span class="mx-1">|</span>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@part.Id" class="d-inline">
+                                <button type="submit" class="btn btn-link p-0 text-danger" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Parts.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">Chưa có phụ tùng nào</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
