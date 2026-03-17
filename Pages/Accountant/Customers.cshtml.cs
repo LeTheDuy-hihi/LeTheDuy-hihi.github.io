@@ -37,16 +37,19 @@ public class CustomersModel : PageModel
 
         // Calculate total spent by each customer
         var customerIds = Customers.Select(c => c.Id).ToList();
-        CustomerTotals = await _context!.ServiceHistories
-            .Where(sh => sh.Vehicle != null && customerIds.Contains(sh.Vehicle.CustomerId))
-            .GroupBy(sh => sh.Vehicle!.CustomerId)
-            .Select(g => new CustomerTotal
-            {
-                CustomerId = g.Key,
-                Total = g.AsEnumerable().Sum(sh => sh.TotalCost)
-            })
-            .ToListAsync();
 
+var data = await _context!.ServiceHistories
+    .Where(sh => sh.Vehicle != null && customerIds.Contains(sh.Vehicle.CustomerId))
+    .ToListAsync(); // 🔥 QUAN TRỌNG
+
+CustomerTotals = data
+    .GroupBy(sh => sh.Vehicle!.CustomerId)
+    .Select(g => new CustomerTotal
+    {
+        CustomerId = g.Key,
+        Total = (decimal)g.Sum(sh => (double)sh.TotalCost)
+    })
+    .ToList();
         if (viewId.HasValue)
         {
             IsViewing = true;
