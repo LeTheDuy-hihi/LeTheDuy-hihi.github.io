@@ -15,7 +15,8 @@
     <div class="card shadow-sm border-0 mb-4">
         <div class="card-body">
             <h5 class="card-title">@((string.IsNullOrEmpty(Model.Input.Id)) ? "Tạo nhân viên" : "Chỉnh sửa nhân viên")</h5>
-            <form method="post" asp-page-handler="@(string.IsNullOrEmpty(Model.Input.Id) ? "Create" : "Edit")" asp-route-id="@Model.Input.Id">
+            <form method="post" asp-page-handler="@(string.IsNullOrEmpty(Model.Input.Id) ? "Create" : "Edit")"
+                  asp-route-id="@Model.Input.Id">
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Họ và tên</label>
@@ -84,7 +85,8 @@
                             <a class="text-decoration-none" asp-page="" asp-route-editId="@user.Id">Sửa</a>
                             <span class="mx-1">|</span>
                             <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" class="d-inline">
-                                <button type="submit" class="btn btn-link p-0 text-danger" onclick="return confirm('Bạn có chắc muốn xóa người dùng này?');">Xóa</button>
+                                <button type="submit" class="btn btn-link p-0 text-danger"
+                                        onclick="return confirm('Bạn có chắc muốn xóa người dùng này?');">Xóa</button>
                             </form>
                         </td>
                     </tr>

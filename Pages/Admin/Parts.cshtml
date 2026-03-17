@@ -15,7 +15,8 @@
     <div class="card shadow-sm border-0 mb-4">
         <div class="card-body">
             <h5 class="card-title">@((Model.InputPart.Id == 0) ? "Tạo phụ tùng" : "Chỉnh sửa phụ tùng")</h5>
-            <form method="post" asp-page-handler="@(Model.InputPart.Id == 0 ? "Create" : "Edit")" asp-route-id="@Model.InputPart.Id">
+            <form method="post" asp-page-handler="@(Model.InputPart.Id == 0 ? "Create" : "Edit")"
+                  asp-route-id="@Model.InputPart.Id">
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Tên phụ tùng</label>
@@ -82,7 +83,8 @@
                             <a class="text-decoration-none" asp-page="" asp-route-editId="@part.Id">Sửa</a>
                             <span class="mx-1">|</span>
                             <form method="post" asp-page-handler="Delete" asp-route-id="@part.Id" class="d-inline">
-                                <button type="submit" class="btn btn-link p-0 text-danger" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</button>
+                                <button type="submit" class="btn btn-link p-0 text-danger"
+                                        onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</button>
                             </form>
                         </td>
                     </tr>
