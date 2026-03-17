@@ -28,10 +28,10 @@ public class ReportsModel : PageModel
         var startOfMonth = new DateTime(now.Year, now.Month, 1);
 
         // Monthly revenue
-        MonthlyRevenue = await _context.ServiceHistories
-            .Where(sh => sh.ServiceDate >= startOfMonth)
-            .SumAsync(sh => sh.TotalCost);
-
+        MonthlyRevenue = (decimal)await _context.ServiceHistories
+    .Where(sh => sh.ServiceDate >= startOfMonth)
+    .Select(sh => (double)sh.TotalCost)
+    .SumAsync();
         // Total invoices this month
         TotalInvoices = await _context.ServiceHistories
             .CountAsync(sh => sh.ServiceDate >= startOfMonth);
@@ -46,10 +46,10 @@ public class ReportsModel : PageModel
             var monthStart = new DateTime(now.Year, now.Month, 1).AddMonths(-i);
             var monthEnd = monthStart.AddMonths(1);
 
-            var revenue = await _context.ServiceHistories
-                .Where(sh => sh.ServiceDate >= monthStart && sh.ServiceDate < monthEnd)
-                .SumAsync(sh => sh.TotalCost);
-
+            var revenue = (decimal)await _context.ServiceHistories
+    .Where(sh => sh.ServiceDate >= monthStart && sh.ServiceDate < monthEnd)
+    .Select(sh => (double)sh.TotalCost)
+    .SumAsync();
             ChartLabels.Add(monthStart.ToString("MM/yyyy"));
             ChartData.Add(revenue);
         }

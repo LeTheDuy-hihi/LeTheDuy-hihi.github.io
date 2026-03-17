@@ -24,10 +24,10 @@ public class ReportsModel : PageModel
     {
         var startOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
 
-        RevenueThisMonth = await _context.ServiceHistories
-            .Where(sh => sh.ServiceDate >= startOfMonth)
-            .SumAsync(sh => (decimal?)sh.TotalCost) ?? 0m;
-
+        RevenueThisMonth = (decimal)await _context.ServiceHistories
+    .Where(sh => sh.ServiceDate >= startOfMonth)
+    .Select(sh => (double)sh.TotalCost)
+    .SumAsync();
         NewCustomersThisMonth = await _context.Customers
             .CountAsync(c => c.CreatedAt >= startOfMonth);
 
