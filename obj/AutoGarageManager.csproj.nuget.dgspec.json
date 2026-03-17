@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {}
+    "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {}
   },
   "projects": {
-    "D:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {
+    "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectUniqueName": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
         "projectName": "AutoGarageManager",
-        "projectPath": "D:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectPath": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
         "packagesPath": "C:\\Users\\Lapto\\.nuget\\packages\\",
-        "outputPath": "D:\\BTL_BACKEND (1)\\AutoGarageManager\\obj\\",
+        "outputPath": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lapto\\AppData\\Roaming\\NuGet\\NuGet.Config"

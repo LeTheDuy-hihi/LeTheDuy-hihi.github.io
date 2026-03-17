@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoGarageManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84c1e7b758a0d286e45b27632979d67f37968945")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a85d1aa3fe6b41c7e5c8fcdd8b8861f99055f055")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoGarageManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoGarageManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

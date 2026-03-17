@@ -70,13 +70,13 @@ namespace AutoGarageManager.Models
 
             // Seed data
             modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, Name = "John Doe", FullName = "John Doe", Email = "john@example.com", Phone = "123-456-7890", Address = "123 Main St" },
-                new Customer { Id = 2, Name = "Jane Smith", FullName = "Jane Smith", Email = "jane@example.com", Phone = "987-654-3210", Address = "456 Oak Ave" }
+                new Customer { Id = 1, Name = "John Doe", FullName = "John Doe", Email = "john@example.com", Phone = "123-456-7890", Address = "123 Main St", CreatedAt = new DateTime(2024, 1, 1) },
+                new Customer { Id = 2, Name = "Jane Smith", FullName = "Jane Smith", Email = "jane@example.com", Phone = "987-654-3210", Address = "456 Oak Ave", CreatedAt = new DateTime(2024, 1, 1) }
             );
 
             modelBuilder.Entity<Vehicle>().HasData(
-                new Vehicle { Id = 1, CustomerId = 1, Make = "Toyota", Model = "Camry", Year = 2020, LicensePlate = "ABC123", Mileage = 15000 },
-                new Vehicle { Id = 2, CustomerId = 2, Make = "Honda", Model = "Civic", Year = 2019, LicensePlate = "XYZ789", Mileage = 20000 }
+                new Vehicle { Id = 1, CustomerId = 1, Make = "Toyota", Model = "Camry", Year = 2020, LicensePlate = "ABC123", Mileage = 15000, CreatedAt = new DateTime(2024, 1, 1) },
+                new Vehicle { Id = 2, CustomerId = 2, Make = "Honda", Model = "Civic", Year = 2019, LicensePlate = "XYZ789", Mileage = 20000, CreatedAt = new DateTime(2024, 1, 1) }
             );
 
             modelBuilder.Entity<Part>().HasData(

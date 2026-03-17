@@ -4,6 +4,7 @@ using AutoGarageManager.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutoGarageManager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260317030902_InitialCreate1")]
+    partial class InitialCreate1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,7 +127,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers", (string)null);
+                    b.ToTable("Customers");
 
                     b.HasData(
                         new
@@ -186,7 +189,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("MaintenanceReminders", (string)null);
+                    b.ToTable("MaintenanceReminders");
                 });
 
             modelBuilder.Entity("AutoGarageManager.Models.Part", b =>
@@ -222,7 +225,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Parts", (string)null);
+                    b.ToTable("Parts");
 
                     b.HasData(
                         new
@@ -282,7 +285,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services", (string)null);
+                    b.ToTable("Services");
 
                     b.HasData(
                         new
@@ -342,7 +345,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("ServiceHistories", (string)null);
+                    b.ToTable("ServiceHistories");
                 });
 
             modelBuilder.Entity("AutoGarageManager.Models.ServiceHistoryPart", b =>
@@ -371,7 +374,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("ServiceHistoryId");
 
-                    b.ToTable("ServiceHistoryParts", (string)null);
+                    b.ToTable("ServiceHistoryParts");
                 });
 
             modelBuilder.Entity("AutoGarageManager.Models.ServiceHistoryService", b =>
@@ -397,7 +400,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("ServiceHistoryServices", (string)null);
+                    b.ToTable("ServiceHistoryServices");
                 });
 
             modelBuilder.Entity("AutoGarageManager.Models.SupportTicket", b =>
@@ -447,7 +450,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("SupportTickets", (string)null);
+                    b.ToTable("SupportTickets");
                 });
 
             modelBuilder.Entity("AutoGarageManager.Models.Vehicle", b =>
@@ -489,7 +492,7 @@ namespace AutoGarageManager.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Vehicles", (string)null);
+                    b.ToTable("Vehicles");
 
                     b.HasData(
                         new

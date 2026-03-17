@@ -636,3 +636,4 @@ d:\BTL_BACKEND (1)\AutoGarageManager\obj\Debug\net10.0\AutoGarageManager.pdb
 d:\BTL_BACKEND (1)\AutoGarageManager\obj\Debug\net10.0\AutoGarageManager.genruntimeconfig.cache
 d:\BTL_BACKEND (1)\AutoGarageManager\obj\Debug\net10.0\ref\AutoGarageManager.dll
 D:\BTL_BACKEND (1)\AutoGarageManager\obj\Debug\net10.0\compressed\txno70vgxs-{0}-4mk6ghf9k3-4mk6ghf9k3.gz
+D:\BTL_BACKEND (1)\AutoGarageManager\obj\Debug\net10.0\AutoGarageManager.sourcelink.json
