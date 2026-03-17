@@ -17,26 +17,39 @@ public class ServiceHistoryModel : PageModel
         _context = context;
     }
 
-    public int VehicleId { get; set; }
+    public int? VehicleId { get; set; }
     public Vehicle? Vehicle { get; set; }
+    public IList<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
     public IList<ServiceHistory> ServiceHistories { get; set; } = new List<ServiceHistory>();
 
-    public async Task<IActionResult> OnGetAsync(int vehicleId)
+    public async Task<IActionResult> OnGetAsync(int? vehicleId)
     {
         VehicleId = vehicleId;
-        Vehicle = await _context.Vehicles
-            .Include(v => v.Customer)
-            .FirstOrDefaultAsync(v => v.Id == vehicleId);
 
-        if (Vehicle == null)
+        if (vehicleId.HasValue)
         {
-            return NotFound();
+            Vehicle = await _context.Vehicles
+                .Include(v => v.Customer)
+                .FirstOrDefaultAsync(v => v.Id == vehicleId.Value);
+
+            if (Vehicle == null)
+            {
+                return NotFound();
+            }
+
+            ServiceHistories = await _context.ServiceHistories
+                .Include(sh => sh.Mechanic)
+                .Where(sh => sh.VehicleId == vehicleId.Value)
+                .OrderByDescending(sh => sh.ServiceDate)
+                .ToListAsync();
+
+            return Page();
         }
 
-        ServiceHistories = await _context.ServiceHistories
-            .Include(sh => sh.Mechanic)
-            .Where(sh => sh.VehicleId == vehicleId)
-            .OrderByDescending(sh => sh.ServiceDate)
+        // No vehicle selected - show list of vehicles to choose from
+        Vehicles = await _context.Vehicles
+            .Include(v => v.Customer)
+            .OrderBy(v => v.LicensePlate)
             .ToListAsync();
 
         return Page();
