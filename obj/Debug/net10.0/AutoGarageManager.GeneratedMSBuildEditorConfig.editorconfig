@@ -19,233 +19,233 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = AutoGarageManager
 build_property.RootNamespace = AutoGarageManager
-build_property.ProjectDir = D:\AutoGarageManager\
+build_property.ProjectDir = F:\LeTheDuy-hihi.github.io\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\AutoGarageManager
+build_property.MSBuildProjectDirectory = F:\LeTheDuy-hihi.github.io
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/AutoGarageManager/Pages/AccessDenied.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/Customers.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxDdXN0b21lcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/ExportReport.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/ExportReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxFeHBvcnRSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/Index.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/InvoiceDetails.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/InvoiceDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbnZvaWNlRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/Invoices.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/Invoices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbnZvaWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/Parts.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/Parts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxQYXJ0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/Reports.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/Reports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxSZXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Accountant/_AccountantLayout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Accountant/_AccountantLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxfQWNjb3VudGFudExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Customers.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Customers/Create.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Customers/Delete.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Customers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Customers/Edit.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Employees.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Employees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Index.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Parts.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Parts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Permissions.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Permissions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGVybWlzc2lvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Reminders.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Reports.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Reports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVwb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Services.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Settings.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Vehicles.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Vehicles/Create.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Vehicles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Vehicles/Delete.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Vehicles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/Vehicles/Edit.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/Vehicles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Admin/_AdminLayout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Admin/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cX0FkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Contact.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/CreateVehicle.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/CreateVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQ3JlYXRlVmVoaWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/DeleteVehicle.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/DeleteVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGVsZXRlVmVoaWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/EditVehicle.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/EditVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRWRpdFZlaGljbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/Index.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/Reminders.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/ServiceHistory.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/ServiceHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcU2VydmljZUhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/Support.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/Support.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcU3VwcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/Vehicles.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Customer/_CustomerLayout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Customer/_CustomerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcX0N1c3RvbWVyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Error.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Index.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Login.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Logout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/CreateService.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/CreateService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcQ3JlYXRlU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/Index.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/ProcessImprovements.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/ProcessImprovements.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcUHJvY2Vzc0ltcHJvdmVtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/Reminders.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/ServiceDetails.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/ServiceDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcU2VydmljZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/ServiceHistory.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/ServiceHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcU2VydmljZUhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/Vehicles.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Mechanic/_MechanicLayout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Mechanic/_MechanicLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcX01lY2hhbmljTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Privacy.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Profile.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Register.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/_ViewImports.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/_ViewStart.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AutoGarageManager/Pages/Shared/_Layout.cshtml]
+[F:/LeTheDuy-hihi.github.io/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a2f5e3ih9c

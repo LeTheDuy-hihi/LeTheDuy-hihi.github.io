@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AutoGarageManager\\AutoGarageManager.csproj": {}
+    "F:\\LeTheDuy-hihi.github.io\\AutoGarageManager.csproj": {}
   },
   "projects": {
-    "D:\\AutoGarageManager\\AutoGarageManager.csproj": {
+    "F:\\LeTheDuy-hihi.github.io\\AutoGarageManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectUniqueName": "F:\\LeTheDuy-hihi.github.io\\AutoGarageManager.csproj",
         "projectName": "AutoGarageManager",
-        "projectPath": "D:\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectPath": "F:\\LeTheDuy-hihi.github.io\\AutoGarageManager.csproj",
         "packagesPath": "C:\\Users\\Lapto\\.nuget\\packages\\",
-        "outputPath": "D:\\AutoGarageManager\\obj\\",
+        "outputPath": "F:\\LeTheDuy-hihi.github.io\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lapto\\AppData\\Roaming\\NuGet\\NuGet.Config"

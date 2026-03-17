@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4I7UhlwmW58=",
+  "dgSpecHash": "ewP/U/JwiRM=",
   "success": true,
-  "projectFilePath": "D:\\AutoGarageManager\\AutoGarageManager.csproj",
+  "projectFilePath": "F:\\LeTheDuy-hihi.github.io\\AutoGarageManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lapto\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Lapto\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
