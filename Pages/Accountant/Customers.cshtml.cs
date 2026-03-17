@@ -43,7 +43,7 @@ public class CustomersModel : PageModel
             .Select(g => new CustomerTotal
             {
                 CustomerId = g.Key,
-                Total = g.Sum(sh => sh.TotalCost)
+                Total = g.AsEnumerable().Sum(sh => sh.TotalCost)
             })
             .ToListAsync();
 

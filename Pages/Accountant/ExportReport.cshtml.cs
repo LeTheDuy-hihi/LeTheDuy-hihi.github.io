@@ -64,7 +64,7 @@ public class ExportReportModel : PageModel
                 .Select(g => new
                 {
                     Month = g.Key,
-                    Total = g.Sum(s => s.TotalCost),
+                    Total = (decimal)g.Sum(s => (double)s.TotalCost),
                     Count = g.Count()
                 })
                 .OrderBy(x => x.Month)
