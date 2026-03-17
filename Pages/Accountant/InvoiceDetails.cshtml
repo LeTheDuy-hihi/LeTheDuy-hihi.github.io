@@ -1,7 +1,15 @@
 @page
 @model AutoGarageManager.Pages.Accountant.InvoiceDetailsModel
+@{
+    Layout = "/Pages/Accountant/_AccountantLayout.cshtml";
+    ViewData["Title"] = "Chi tiết hóa đơn";
+}
 
 <div class="invoice-details">
+    <div class="mb-3">
+        <a class="btn btn-sm btn-outline-secondary" asp-page="/Accountant/Invoices">⟵ Quay lại danh sách</a>
+    </div>
+
     @if (Model.Invoice != null)
     {
         <div class="text-center mb-4">
@@ -12,14 +20,14 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <strong>Thông tin khách hàng:</strong><br>
-                @Model.Invoice.Vehicle.Customer.FullName<br>
-                @Model.Invoice.Vehicle.Customer.Phone<br>
-                @Model.Invoice.Vehicle.Customer.Email
+                @(Model.Invoice?.Vehicle?.Customer?.FullName ?? "N/A")<br>
+                @(Model.Invoice?.Vehicle?.Customer?.Phone ?? "N/A")<br>
+                @(Model.Invoice?.Vehicle?.Customer?.Email ?? "N/A")
             </div>
             <div class="col-md-6">
                 <strong>Thông tin xe:</strong><br>
-                Biển số: @Model.Invoice.Vehicle.LicensePlate<br>
-                Model: @Model.Invoice.Vehicle.Model<br>
+                Biển số: @(Model.Invoice?.Vehicle?.LicensePlate ?? "N/A")<br>
+                Model: @(Model.Invoice?.Vehicle?.Model ?? "N/A")<br>
                 Năm: @Model.Invoice.Vehicle.Year
             </div>
         </div>

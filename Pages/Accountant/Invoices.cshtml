@@ -30,13 +30,13 @@
                 @foreach (var invoice in Model.Invoices)
                 {
                     <tr>
-                        <td>HD@invoices.Id.ToString("D4")</td>
-                        <td>@invoice.Vehicle.LicensePlate</td>
-                        <td>@invoice.Vehicle.Customer.FullName</td>
+                        <td>HD@invoice.Id.ToString("D4")</td>
+                        <td>@invoice.Vehicle?.LicensePlate ?? "N/A"</td>
+                        <td>@invoice.Vehicle?.Customer?.FullName ?? "N/A"</td>
                         <td>@invoice.ServiceDate.ToString("dd/MM/yyyy")</td>
                         <td>@invoice.TotalCost.ToString("N0")₫</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-primary" onclick="viewInvoice(@invoice.Id)">Xem</button>
+                            <a class="btn btn-sm btn-outline-primary" asp-page="/Accountant/InvoiceDetails" asp-route-id="@invoice.Id">Xem</a>
                             <button class="btn btn-sm btn-outline-success" onclick="printInvoice(@invoice.Id)">In</button>
                         </td>
                     </tr>

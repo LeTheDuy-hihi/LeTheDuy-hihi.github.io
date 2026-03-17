@@ -17,14 +17,14 @@
         <div class="col-md-4 col-sm-6">
             <div class="mechanic-stat-card">
                 <div class="mechanic-stat-label">Tổng xe đã sửa</div>
-                <div class="mechanic-stat-value">@Model.TotalServices</div>
+                <div class="mechanic-stat-value">@(Model?.TotalServices ?? 0)</div>
                 <div class="mechanic-stat-dot bg-success"></div>
             </div>
         </div>
         <div class="col-md-4 col-sm-6">
             <div class="mechanic-stat-card">
                 <div class="mechanic-stat-label">Nhắc bảo dưỡng</div>
-                <div class="mechanic-stat-value">@Model.PendingReminders</div>
+                <div class="mechanic-stat-value">@(Model?.PendingReminders ?? 0)</div>
                 <div class="mechanic-stat-dot bg-warning"></div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     {
                         <div class="list-group-item d-flex justify-content-between align-items-center">
                             <div>
-                                <div class="fw-semibold">@service.Vehicle.LicensePlate</div>
+                                <div class="fw-semibold">@(service.Vehicle?.LicensePlate ?? "N/A")</div>
                                 <small class="text-muted">@service.Description</small>
                             </div>
                             <span class="badge bg-primary">@service.ServiceDate.ToString("HH:mm")</span>

@@ -1,5 +1,9 @@
 @page
 @model AutoGarageManager.Pages.Mechanic.ServiceDetailsModel
+@{
+    Layout = "/Pages/Mechanic/_MechanicLayout.cshtml";
+    ViewData["Title"] = "Chi tiết lần sửa";
+}
 
 <div class="service-details">
     @if (Model.ServiceHistory != null)
@@ -14,7 +18,7 @@
             <ul>
                 @foreach (var service in Model.ServiceHistory.ServicesPerformed)
                 {
-                    <li>@service.Service.Name - @service.Price.ToString("N0")₫</li>
+                    <li>@(service.Service?.Name ?? "N/A") - @service.Price.ToString("N0")₫</li>
                 }
             </ul>
         }
@@ -25,15 +29,18 @@
             <ul>
                 @foreach (var part in Model.ServiceHistory.PartsUsed)
                 {
-                    <li>@part.Part.Name x@part.Quantity - @part.UnitPrice.ToString("N0")₫</li>
+                    <li>@(part.Part?.Name ?? "N/A") x@part.Quantity - @part.UnitPrice.ToString("N0")₫</li>
                 }
             </ul>
         }
 
         <p><strong>Tổng tiền:</strong> @Model.ServiceHistory.TotalCost.ToString("N0")₫</p>
+        <a class="btn btn-secondary mt-3" asp-page="/Mechanic/ServiceHistory"
+           asp-route-vehicleId="@Model.ServiceHistory.VehicleId">⟵ Quay lại lịch sử sửa</a>
     }
     else
     {
         <p class="text-muted">Không tìm thấy thông tin lần sửa.</p>
+        <a class="btn btn-secondary mt-3" asp-page="/Mechanic/ServiceHistory">⟵ Quay lại</a>
     }
 </div>

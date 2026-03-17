@@ -20,9 +20,9 @@ public class RemindersModel : PageModel
 
     public async Task OnGetAsync()
     {
-        Reminders = await _context.MaintenanceReminders
+        Reminders = await _context!.MaintenanceReminders
             .Include(mr => mr.Vehicle)
-                .ThenInclude(v => v.Customer)
+                .ThenInclude(v => v!.Customer)
             .OrderByDescending(mr => mr.ReminderDate)
             .ToListAsync();
     }

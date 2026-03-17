@@ -1,4 +1,5 @@
 using AutoGarageManager.Models;
+using AutoGarageManager.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace AutoGarageManager.Data
@@ -41,13 +42,58 @@ namespace AutoGarageManager.Data
             using (var scope = _serviceProvider.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                var smsService = scope.ServiceProvider.GetRequiredService<ISmsService>();
 
                 // Get all vehicles
                 var vehicles = await context.Vehicles.ToListAsync();
 
                 foreach (var vehicle in vehicles)
                 {
-                    // Check for oil change (every 5000 miles or 6 months)
+                    // 6-month service reminder based on last service date
+                    var lastService = await context.ServiceHistories
+                        .Where(sh => sh.VehicleId == vehicle.Id)
+                        .OrderByDescending(sh => sh.ServiceDate)
+                        .FirstOrDefaultAsync();
+
+                    if (lastService != null && lastService.ServiceDate.AddMonths(6) <= DateTime.Now)
+                    {
+                        var existingSixMonthReminder = await context.MaintenanceReminders
+                            .FirstOrDefaultAsync(r => r.VehicleId == vehicle.Id &&
+                                                     r.Title == "6-Month Maintenance" &&
+                                                     !r.IsCompleted);
+
+                        if (existingSixMonthReminder == null)
+                        {
+                            var reminder = new MaintenanceReminder
+                            {
+                                VehicleId = vehicle.Id,
+                                Title = "6-Month Maintenance",
+                                Message = $"Maintenance reminder: {vehicle.Make} {vehicle.Model} ({vehicle.LicensePlate}) last serviced on {lastService.ServiceDate:dd/MM/yyyy}.",
+                                ReminderDate = DateTime.Now
+                            };
+
+                            context.MaintenanceReminders.Add(reminder);
+                            _logger.LogInformation($"Created 6-month maintenance reminder for vehicle {vehicle.Id}");
+
+                            // Send SMS if phone number exists
+                            var vehicleWithCustomer = await context.Vehicles
+                                .Include(v => v.Customer)
+                                .FirstOrDefaultAsync(v => v.Id == vehicle.Id);
+
+                            if (vehicleWithCustomer?.Customer != null && !string.IsNullOrEmpty(vehicleWithCustomer.Customer.Phone))
+                            {
+                                var smsMessage = $"Nhắc nhở: Xe {vehicleWithCustomer.Make} {vehicleWithCustomer.Model} ({vehicleWithCustomer.LicensePlate}) cần bảo dưỡng định kỳ 6 tháng. Liên hệ gara để được hỗ trợ.";
+                                var smsSent = await smsService.SendSmsAsync(vehicleWithCustomer.Customer.Phone, smsMessage);
+                                if (smsSent)
+                                {
+                                    reminder.IsSent = true;
+                                    _logger.LogInformation($"SMS sent to {vehicleWithCustomer.Customer.Phone} for 6-month maintenance.");
+                                }
+                            }
+                        }
+                    }
+
+                    // Check for oil change (every 5000 miles)
                     if (vehicle.Mileage > 0 && vehicle.Mileage % 5000 == 0)
                     {
                         var existingReminder = await context.MaintenanceReminders
@@ -68,6 +114,22 @@ namespace AutoGarageManager.Data
 
                             context.MaintenanceReminders.Add(reminder);
                             _logger.LogInformation($"Created oil change reminder for vehicle {vehicle.Id}");
+
+                            // Send SMS if phone number exists
+                            var customerInfo = await context.Vehicles
+                                .Include(v => v.Customer)
+                                .FirstOrDefaultAsync(v => v.Id == vehicle.Id);
+
+                            if (customerInfo?.Customer != null && !string.IsNullOrEmpty(customerInfo.Customer.Phone))
+                            {
+                                var smsMessage = $"Nhắc nhở: Xe {customerInfo.Make} {customerInfo.Model} ({customerInfo.LicensePlate}) cần thay dầu động cơ. Liên hệ gara để đặt lịch sửa chữa.";
+                                var smsSent = await smsService.SendSmsAsync(customerInfo.Customer.Phone, smsMessage);
+                                if (smsSent)
+                                {
+                                    reminder.IsSent = true;
+                                    _logger.LogInformation($"SMS sent to {customerInfo.Customer.Phone} for oil change reminder.");
+                                }
+                            }
                         }
                     }
 
@@ -92,6 +154,22 @@ namespace AutoGarageManager.Data
 
                             context.MaintenanceReminders.Add(reminder);
                             _logger.LogInformation($"Created tire rotation reminder for vehicle {vehicle.Id}");
+
+                            // Send SMS if phone number exists
+                            var customerInfo = await context.Vehicles
+                                .Include(v => v.Customer)
+                                .FirstOrDefaultAsync(v => v.Id == vehicle.Id);
+
+                            if (customerInfo?.Customer != null && !string.IsNullOrEmpty(customerInfo.Customer.Phone))
+                            {
+                                var smsMessage = $"Nhắc nhở: Xe {customerInfo.Make} {customerInfo.Model} ({customerInfo.LicensePlate}) cần xoay vòng bánh xe. Liên hệ gara để đặt lịch sửa chữa.";
+                                var smsSent = await smsService.SendSmsAsync(customerInfo.Customer.Phone, smsMessage);
+                                if (smsSent)
+                                {
+                                    reminder.IsSent = true;
+                                    _logger.LogInformation($"SMS sent to {customerInfo.Customer.Phone} for tire rotation reminder.");
+                                }
+                            }
                         }
                     }
 
@@ -116,6 +194,22 @@ namespace AutoGarageManager.Data
 
                             context.MaintenanceReminders.Add(reminder);
                             _logger.LogInformation($"Created brake inspection reminder for vehicle {vehicle.Id}");
+
+                            // Send SMS if phone number exists
+                            var customerInfo = await context.Vehicles
+                                .Include(v => v.Customer)
+                                .FirstOrDefaultAsync(v => v.Id == vehicle.Id);
+
+                            if (customerInfo?.Customer != null && !string.IsNullOrEmpty(customerInfo.Customer.Phone))
+                            {
+                                var smsMessage = $"Nhắc nhở: Xe {customerInfo.Make} {customerInfo.Model} ({customerInfo.LicensePlate}) cần kiểm tra hệ thống phanh. Liên hệ gara để đặt lịch sửa chữa.";
+                                var smsSent = await smsService.SendSmsAsync(customerInfo.Customer.Phone, smsMessage);
+                                if (smsSent)
+                                {
+                                    reminder.IsSent = true;
+                                    _logger.LogInformation($"SMS sent to {customerInfo.Customer.Phone} for brake inspection reminder.");
+                                }
+                            }
                         }
                     }
                 }

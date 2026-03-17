@@ -4,114 +4,112 @@
     ViewData["Title"] = "Đăng ký";
 }
 
-<div class="container">
-    <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-md-8 col-lg-6">
-            <!-- Info Card -->
-            <div class="card shadow mb-4 border-info">
-                <div class="card-header bg-info text-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-user-plus me-2"></i>Thông tin đăng ký
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <div class="alert alert-info" role="alert">
-                        <i class="fas fa-info-circle me-2"></i>
-                        <strong>Lưu ý:</strong> Phần đăng ký tài khoản khách hàng sẽ được triển khai chi tiết ở các bước
-                        sau (tích hợp database).
-                        Hiện tại chỉ minh họa form cho bài tập.
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <i class="fas fa-users fa-2x text-info mb-2"></i>
-                            <h6>Khách hàng</h6>
-                            <small class="text-muted">Đăng ký tài khoản cá nhân</small>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="fas fa-tools fa-2x text-warning mb-2"></i>
-                            <h6>Thợ sửa chữa</h6>
-                            <small class="text-muted">Đăng ký cho nhân viên kỹ thuật</small>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="fas fa-calculator fa-2x text-success mb-2"></i>
-                            <h6>Kế toán</h6>
-                            <small class="text-muted">Đăng ký cho nhân viên kế toán</small>
+<section class="page-wrapper">
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-80">
+            <div class="col-md-10 col-lg-8">
+                <div class="page-card mb-4">
+                    <div class="page-card-header">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div>
+                                <h2 class="page-title mb-1">
+                                    <i class="fas fa-user-plus me-2"></i>Đăng ký tài khoản
+                                </h2>
+                                <p class="page-subtitle">Tạo ngay tài khoản để trải nghiệm hệ thống quản lý gara</p>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-info">Demo</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Registration Form -->
-            <div class="card shadow">
-                <div class="card-header bg-white">
-                    <h4 class="card-title mb-0 text-center">
-                        <i class="fas fa-user-plus me-2 text-success"></i>Đăng ký tài khoản
-                    </h4>
-                </div>
-                <div class="card-body">
-                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                    {
-                        <div class="alert alert-danger" role="alert">
-                            <i class="fas fa-exclamation-triangle me-2"></i>
-                            @Model.ErrorMessage
-                        </div>
-                    }
-
-                    <form method="post">
-                        <div class="mb-3">
-                            <label asp-for="FullName" class="form-label">
-                                <i class="fas fa-user me-1"></i>Họ và tên
-                            </label>
-                            <input asp-for="FullName" class="form-control form-control-lg"
-                                   placeholder="Nhập họ và tên đầy đủ" />
-                            <span asp-validation-for="FullName" class="text-danger"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label asp-for="Email" class="form-label">
-                                <i class="fas fa-envelope me-1"></i>Email
-                            </label>
-                            <input asp-for="Email" class="form-control form-control-lg"
-                                   placeholder="Nhập địa chỉ email" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label asp-for="Password" class="form-label">
-                                <i class="fas fa-lock me-1"></i>Mật khẩu
-                            </label>
-                            <input asp-for="Password" type="password" class="form-control form-control-lg"
-                                   placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-                        </div>
-                        <div class="mb-4">
-                            <label asp-for="ConfirmPassword" class="form-label">
-                                <i class="fas fa-lock me-1"></i>Xác nhận mật khẩu
-                            </label>
-                            <input asp-for="ConfirmPassword" type="password" class="form-control form-control-lg"
-                                   placeholder="Nhập lại mật khẩu" />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    <div class="page-card-body">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="p-3 rounded-3 bg-white shadow-sm text-center">
+                                    <i class="fas fa-users fa-2x text-info mb-2"></i>
+                                    <h6>Khách hàng</h6>
+                                    <small class="text-muted">Đăng ký tài khoản cá nhân</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 rounded-3 bg-white shadow-sm text-center">
+                                    <i class="fas fa-tools fa-2x text-warning mb-2"></i>
+                                    <h6>Thợ sửa chữa</h6>
+                                    <small class="text-muted">Đăng ký nhân viên kỹ thuật</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 rounded-3 bg-white shadow-sm text-center">
+                                    <i class="fas fa-calculator fa-2x text-success mb-2"></i>
+                                    <h6>Kế toán</h6>
+                                    <small class="text-muted">Đăng ký nhân viên kế toán</small>
+                                </div>
+                            </div>
                         </div>
 
-                        <button type="submit" class="btn btn-success btn-lg w-100">
-                            <i class="fas fa-user-plus me-2"></i>Đăng ký (demo)
-                        </button>
-                    </form>
+                        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                @Model.ErrorMessage
+                            </div>
+                        }
 
-                    <hr class="my-4">
+                        <form method="post" class="mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label asp-for="FullName" class="form-label">
+                                        <i class="fas fa-user me-1"></i>Họ và tên
+                                    </label>
+                                    <input asp-for="FullName" class="form-control"
+                                           placeholder="Nhập họ và tên đầy đủ" />
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label asp-for="Email" class="form-label">
+                                        <i class="fas fa-envelope me-1"></i>Email
+                                    </label>
+                                    <input asp-for="Email" class="form-control" placeholder="Nhập địa chỉ email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label asp-for="Password" class="form-label">
+                                        <i class="fas fa-lock me-1"></i>Mật khẩu
+                                    </label>
+                                    <input asp-for="Password" type="password" class="form-control"
+                                           placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label asp-for="ConfirmPassword" class="form-label">
+                                        <i class="fas fa-lock me-1"></i>Xác nhận mật khẩu
+                                    </label>
+                                    <input asp-for="ConfirmPassword" type="password" class="form-control"
+                                           placeholder="Nhập lại mật khẩu" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                            </div>
 
-                    <div class="text-center">
-                        <small class="text-muted">
-                            <i class="fas fa-sign-in-alt me-1"></i>
-                            Đã có tài khoản?
-                            <a href="/Login" class="text-decoration-none">
-                                <strong>Đăng nhập ngay</strong>
-                            </a>
-                        </small>
+                            <button type="submit" class="btn btn-modern btn-primary-modern w-100 mt-3">
+                                <i class="fas fa-user-plus me-2"></i>Đăng ký (demo)
+                            </button>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-sign-in-alt me-1"></i>
+                                Đã có tài khoản?
+                                <a href="/Login" class="text-decoration-none">
+                                    <strong>Đăng nhập ngay</strong>
+                                </a>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

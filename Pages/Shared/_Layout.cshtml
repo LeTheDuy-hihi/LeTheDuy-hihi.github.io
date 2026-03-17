@@ -10,15 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site-modern.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AutoGarageManager.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-            <div class="container">
-                <a class="navbar-brand fw-bold" asp-area="" asp-page="/Index">
-                    <i class="fas fa-car me-2"></i>Auto Garage Manager
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg"
+             style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; background-attachment: fixed;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" asp-area="" asp-page="/Index"
+                       style="font-size: 1.3rem; background: linear-gradient(135deg, #0d6efd, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    <i class="fas fa-car me-2"></i>Auto Garage
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +39,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">
+                            <a class="nav-link" asp-page="/Contact">
                                 <i class="fas fa-envelope me-1"></i>Liên hệ
                             </a>
                         </li>
@@ -99,14 +101,14 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container-fluid px-0">
+        <main role="main" class="page-wrapper pb-3">
             @RenderBody()
         </main>
     </div>
 
     <footer class="bg-dark text-light py-4 mt-5">
-        <div class="container">
+        <div class="container-fluid px-0">
             <div class="row">
                 <div class="col-md-6">
                     <h5>Auto Garage Manager</h5>

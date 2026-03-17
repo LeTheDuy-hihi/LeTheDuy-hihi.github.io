@@ -21,11 +21,11 @@ public class PermissionsModel : PageModel
 
     public async Task OnGetAsync()
     {
-        var roles = _roleManager.Roles.ToList();
+        var roles = _roleManager!.Roles.ToList();
 
         foreach (var role in roles)
         {
-            var usersInRole = await _userManager.GetUsersInRoleAsync(role.Name);
+            var usersInRole = await _userManager.GetUsersInRoleAsync(role.Name!);
             Roles.Add(new RoleViewModel
             {
                 Name = role.Name,

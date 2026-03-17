@@ -25,8 +25,8 @@
                 @foreach (var reminder in Model.Reminders)
                 {
                     <tr>
-                        <td>@reminder.Vehicle.LicensePlate</td>
-                        <td>@reminder.Vehicle.Customer.FullName</td>
+                        <td>@(reminder.Vehicle?.LicensePlate ?? "N/A")</td>
+                        <td>@(reminder.Vehicle?.Customer?.FullName ?? "N/A")</td>
                         <td>@reminder.Title</td>
                         <td>@reminder.ReminderDate.ToString("dd/MM/yyyy")</td>
                         <td>

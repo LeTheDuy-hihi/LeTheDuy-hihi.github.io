@@ -7,8 +7,89 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="h4 mb-0">Quản lý kho phụ tùng</h2>
-    <a class="btn btn-dark" href="#">+ Nhập phụ tùng</a>
+    <div class="btn-group" role="group">
+        <a class="btn btn-dark" asp-page="./Parts" asp-route-create="1">+ Nhập phụ tùng</a>
+    </div>
 </div>
+
+@if (Model.IsCreating || Model.IsEditing)
+{
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h5 class="card-title">@((Model.IsCreating) ? "Nhập phụ tùng" : "Sửa phụ tùng")</h5>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            <form method="post" asp-page-handler="@(Model.IsCreating ? "Create" : "Edit")" asp-route-id="@(Model.IsEditing ? Model.InputPart.Id : 0)">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Tên phụ tùng</label>
+                        <input asp-for="InputPart.Name" class="form-control" />
+                        <span asp-validation-for="InputPart.Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Loại</label>
+                        <input asp-for="InputPart.Category" class="form-control" />
+                        <span asp-validation-for="InputPart.Category" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Số lượng</label>
+                        <input asp-for="InputPart.Quantity" type="number" min="0" step="1" class="form-control" />
+                        <span asp-validation-for="InputPart.Quantity" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Giá</label>
+                        <input asp-for="InputPart.Price" type="number" min="0" step="0.01" class="form-control" />
+                        <span asp-validation-for="InputPart.Price" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nhà cung cấp</label>
+                        <input asp-for="InputPart.Supplier" class="form-control" />
+                        <span asp-validation-for="InputPart.Supplier" class="text-danger"></span>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Mô tả</label>
+                        <textarea asp-for="InputPart.Description" class="form-control" rows="2"></textarea>
+                        <span asp-validation-for="InputPart.Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <a class="btn btn-secondary" asp-page="./Parts">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+@if (Model.IsRestocking)
+{
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Nhập thêm phụ tùng</h5>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            @if (Model.SelectedPart != null)
+            {
+                <form method="post" asp-page-handler="Restock" asp-route-id="@Model.SelectedPart.Id">
+                    <p><strong>@Model.SelectedPart.Name</strong> (Hiện tại: @Model.SelectedPart.Quantity)</p>
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-3">
+                            <label class="form-label">Số lượng nhập thêm</label>
+                            <input asp-for="RestockQuantity" type="number" min="1" class="form-control" />
+                            <span asp-validation-for="RestockQuantity" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-success">Nhập thêm</button>
+                            <a class="btn btn-secondary" asp-page="./Parts">Hủy</a>
+                        </div>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <div class="alert alert-warning">Phụ tùng không tồn tại.</div>
+            }
+        </div>
+    </div>
+}
 
 <div class="card shadow-sm border-0">
     <div class="table-responsive">
@@ -46,8 +127,8 @@
                         <td>@part.Price.ToString("N0")₫</td>
                         <td>@part.Supplier</td>
                         <td>
-                            <a class="text-decoration-none me-2" href="#">Sửa</a>
-                            <a class="text-decoration-none" href="#">Nhập thêm</a>
+                            <a class="text-decoration-none me-2" asp-page="./Parts" asp-route-editId="@part.Id">Sửa</a>
+                            <a class="text-decoration-none" asp-page="./Parts" asp-route-restockId="@part.Id">Nhập thêm</a>
                         </td>
                     </tr>
                 }

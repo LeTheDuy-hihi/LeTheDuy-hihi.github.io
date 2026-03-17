@@ -32,15 +32,26 @@ public class CreateServiceModel : PageModel
     public decimal TotalCost { get; set; }
 
     public Vehicle? Vehicle { get; set; }
+    public IList<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
     public IList<Service> Services { get; set; } = new List<Service>();
     public IList<Part> Parts { get; set; } = new List<Part>();
 
-    public async Task<IActionResult> OnGetAsync(int vehicleId)
+    public async Task<IActionResult> OnGetAsync(int? vehicleId)
     {
-        VehicleId = vehicleId;
+        if (!vehicleId.HasValue || vehicleId.Value <= 0)
+        {
+            Vehicles = await _context.Vehicles
+                .Include(v => v.Customer)
+                .OrderBy(v => v.LicensePlate)
+                .ToListAsync();
+
+            return Page();
+        }
+
+        VehicleId = vehicleId.Value;
         Vehicle = await _context.Vehicles
             .Include(v => v.Customer)
-            .FirstOrDefaultAsync(v => v.Id == vehicleId);
+            .FirstOrDefaultAsync(v => v.Id == VehicleId);
 
         if (Vehicle == null)
         {
@@ -74,6 +85,13 @@ public class CreateServiceModel : PageModel
         if (currentUser != null && await _userManager.IsInRoleAsync(currentUser, "Mechanic"))
         {
             serviceHistory.MechanicId = currentUser.Id;
+        }
+
+        if (VehicleId <= 0)
+        {
+            ModelState.AddModelError(string.Empty, "Vehicle must be selected.");
+            await LoadDataAsync();
+            return Page();
         }
 
         _context.ServiceHistories.Add(serviceHistory);
@@ -126,7 +144,7 @@ public class CreateServiceModel : PageModel
 
         await _context.SaveChangesAsync();
 
-        return RedirectToPage("/Mechanic/ServiceHistory", new { vehicleId = VehicleId });
+        return RedirectToPage("/Mechanic/ServiceHistory", new { vehicleId = serviceHistory.VehicleId });
     }
 
     private async Task LoadDataAsync()

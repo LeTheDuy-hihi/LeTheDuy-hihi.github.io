@@ -39,11 +39,13 @@ public class DeleteVehicleModel : PageModel
             return NotFound();
         }
 
-        Vehicle = customer.Vehicles.FirstOrDefault(v => v.Id == id);
-        if (Vehicle == null)
+        var vehicle = customer.Vehicles?.FirstOrDefault(v => v.Id == id);
+        if (vehicle == null)
         {
             return NotFound();
         }
+
+        Vehicle = vehicle;
 
         return Page();
     }

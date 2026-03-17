@@ -20,9 +20,9 @@ public class InvoicesModel : PageModel
 
     public async Task OnGetAsync(string? date)
     {
-        var query = _context.ServiceHistories
+        var query = _context!.ServiceHistories
             .Include(sh => sh.Vehicle)
-                .ThenInclude(v => v.Customer)
+                .ThenInclude(v => v!.Customer)
             .AsQueryable();
 
         if (!string.IsNullOrEmpty(date) && DateTime.TryParse(date, out var filterDate))

@@ -1,0 +1,196 @@
+@page "/Contact"
+@model ContactModel
+@{
+    ViewData["Title"] = "Liên Hệ - Auto Garage Manager";
+}
+
+<section class="contact-section py-6">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="section-header-modern text-center mb-5">
+            <span class="section-badge-modern">
+                <i class="fas fa-envelope"></i>
+                LIÊN HỆ VỚI CHÚNG TÔI
+            </span>
+            <h2 class="section-title-modern">Gửi Tin Nhắn Cho Chúng Tôi</h2>
+            <p class="section-subtitle-modern">
+                Có câu hỏi hay cần hỗ trợ? Hãy liên hệ với chúng tôi, chúng tôi sẽ phản hồi sớm nhất có thể.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Điện Thoại</h4>
+                            <p><a href="tel:0901234567" class="text-decoration-none">0901 234 567</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@autogarage.vn" class="text-decoration-none">info@autogarage.vn</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Địa Chỉ</h4>
+                            <p>123 Đường Nguyễn Huệ, Quận 1, TP.HCM</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Giờ Làm Việc</h4>
+                            <p>Thứ 2 - Thứ 6: 8:00 - 18:00<br />Thứ 7 - Chủ Nhật: 8:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-card">
+                    <form method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Họ và Tên *</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" name="name"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Địa Chỉ Email *</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Số Điện Thoại</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Chủ Đề *</label>
+                                    <input type="text" class="form-control form-control-lg" id="subject" name="subject"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Nội Dung *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="6"
+                                              required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-modern btn-primary-modern btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Gửi Tin Nhắn
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                            @ViewBag.Message
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-info-card {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #0d6efd, #00d4ff);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .info-content h4 {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .info-content p {
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .contact-form-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .form-control,
+    .form-control-lg,
+    textarea {
+        border: 1.5px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus,
+    .form-control-lg:focus,
+    textarea:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    }
+</style>

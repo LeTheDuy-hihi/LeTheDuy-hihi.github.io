@@ -17,99 +17,71 @@
             <p class="text-muted mb-0">Chọn xe để xem lịch sử sửa chữa</p>
         }
     </div>
-    @if (Model.Vehicle != null)
-    {
-        <a class="btn btn-primary" asp-page="/Mechanic/CreateService" asp-route-vehicleId="@Model.VehicleId">+ Tạo lần sửa
-            mới</a>
+    <div>
+        <a class="btn btn-outline-secondary me-2" asp-page="/Mechanic/Vehicles">⟵ Quay lại</a>
+        @if (Model.Vehicle != null)
+        {
+            <a class="btn btn-primary" asp-page="/Mechanic/CreateService" asp-route-vehicleId="@Model.VehicleId">+ Tạo lần sửa mới</a>
         }
     </div>
+</div>
 
-    @if (Model.Vehicle != null)
-    {
-        <div class="card shadow-sm border-0">
-            <div class="table-responsive">
-                <table class="table mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Ngày</th>
-                            <th>Mô tả</th>
-                            <th>Thợ sửa</th>
-                            <th>Tổng tiền</th>
-                            <th>Chi tiết</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var history in Model.ServiceHistories)
-                        {
-                            <tr>
-                                <td>@history.ServiceDate.ToString("dd/MM/yyyy")</td>
-                                <td>@history.Description</td>
-                                <td>@(history.Mechanic?.FullName ?? "N/A")</td>
-                                <td>@history.TotalCost.ToString("N0")₫</td>
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary" onclick="showDetails(@history.Id)">Xem</button>
-                                </td>
-                            </tr>
-                        }
-                        @if (!Model.ServiceHistories.Any())
-                        {
-                            <tr>
-                                <td colspan="5" class="text-center text-muted">Chưa có lịch sử sửa chữa</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    }
-    else
-    {
-        <div class="card shadow-sm border-0">
-            <div class="card-body">
-                <p>Chọn xe để xem lịch sử sửa chữa:</p>
-                <ul class="list-group">
-                    @foreach (var vehicle in Model.Vehicles)
+@if (Model.Vehicle != null)
+{
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Mô tả</th>
+                        <th>Thợ sửa</th>
+                        <th>Tổng tiền</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var history in Model.ServiceHistories)
                     {
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div>
-                                <strong>@vehicle.LicensePlate</strong> - @vehicle.Make @vehicle.Model
-                                <div class="text-muted small">@vehicle.Customer?.FullName</div>
-                            </div>
-                            <a class="btn btn-sm btn-primary" asp-page="/Mechanic/ServiceHistory"
-                               asp-route-vehicleId="@vehicle.Id">Xem</a>
-                        </li>
+                        <tr>
+                            <td>@history.ServiceDate.ToString("dd/MM/yyyy")</td>
+                            <td>@history.Description</td>
+                            <td>@(history.Mechanic?.FullName ?? "N/A")</td>
+                            <td>@history.TotalCost.ToString("N0")₫</td>
+                            <td>
+                                <a class="btn btn-sm btn-outline-primary" asp-page="/Mechanic/ServiceDetails" asp-route-id="@history.Id">Xem</a>
+                            </td>
+                        </tr>
                     }
-                </ul>
-            </div>
-        </div>
-    }
-
-    <!-- Modal for service details -->
-    <div class="modal fade" id="serviceDetailsModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Chi tiết lần sửa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" id="serviceDetailsContent">
-                    <!-- Content will be loaded here -->
-                </div>
-            </div>
+                    @if (!Model.ServiceHistories.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">Chưa có lịch sử sửa chữa</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-
-    @section Scripts {
-        <script>
-                async function showDetails(serviceHistoryId) {
-                    try {
-                        const response = await fetch(`/Mechanic/ServiceDetails?id=${serviceHistoryId}`);
-                        const data = await response.text();
-                        document.getElementById('serviceDetailsContent').innerHTML = data;
-                        new bootstrap.Modal(document.getElementById('serviceDetailsModal')).show();
-                    } catch (error) {
-                        console.error('Error loading service details:', error);
-                    }
+}
+else
+{
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <p>Chọn xe để xem lịch sử sửa chữa:</p>
+            <ul class="list-group">
+                @foreach (var vehicle in Model.Vehicles)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>@vehicle.LicensePlate</strong> - @vehicle.Make @vehicle.Model
+                            <div class="text-muted small">@vehicle.Customer?.FullName</div>
+                        </div>
+                        <a class="btn btn-sm btn-primary" asp-page="/Mechanic/ServiceHistory" asp-route-vehicleId="@vehicle.Id">Xem</a>
+                    </li>
                 }
-        </script>
-    }
+            </ul>
+        </div>
+    </div>
+}
+

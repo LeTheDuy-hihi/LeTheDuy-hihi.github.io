@@ -1,10 +1,38 @@
-@page
+@page "{vehicleId:int?}"
 @model AutoGarageManager.Pages.Mechanic.CreateServiceModel
 @{
     Layout = "/Pages/Mechanic/_MechanicLayout.cshtml";
     ViewData["Title"] = "Tạo lần sửa chữa";
 }
 
+@if (Model.Vehicle == null)
+{
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white border-0">
+            <h2 class="h5 mb-0">Chọn xe để tạo lần sửa</h2>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                @foreach (var vehicle in Model.Vehicles)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>@vehicle.LicensePlate</strong> - @vehicle.Make @vehicle.Model<br />
+                            <small class="text-muted">@vehicle.Customer?.FullName</small>
+                        </div>
+                        <a class="btn btn-sm btn-primary" asp-page="/Mechanic/CreateService" asp-route-vehicleId="@vehicle.Id">Chọn</a>
+                    </li>
+                }
+                @if (!Model.Vehicles.Any())
+                {
+                    <li class="list-group-item text-center text-muted">Chưa có xe nào</li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+else
+{
 <div class="row">
     <div class="col-md-8">
         <div class="card shadow-sm border-0">
@@ -33,7 +61,7 @@
                             {
                                 <div class="col-md-6">
                                     <div class="form-check">
-                                        <input class="form-check-input service-checkbox" type="checkbox"
+                                        <input class="form-check-input service-checkbox" type="checkbox" name="selectedServices"
                                                value="@service.Id" id="service_@service.Id" />
                                         <label class="form-check-label" for="service_@service.Id">
                                             @service.Name - @service.Price.ToString("N0")₫
@@ -57,9 +85,11 @@
                                                 <option value="@part.Id" data-price="@part.Price">@part.Name (@part.Quantity còn lại)</option>
                                             }
                                         </select>
+                                        <input type="hidden" name="partIds" class="part-id-input" value="" />
                                     </div>
                                     <div class="col-md-2">
                                         <input type="number" class="form-control quantity-input" placeholder="SL" min="1" />
+                                        <input type="hidden" name="quantities" class="part-qty-input" value="" />
                                     </div>
                                     <div class="col-md-3">
                                         <input type="text" class="form-control price-display" readonly placeholder="Giá" />
@@ -125,6 +155,8 @@
                 template.querySelector('.part-select').value = '';
                 template.querySelector('.quantity-input').value = '';
                 template.querySelector('.price-display').value = '';
+                template.querySelector('.part-id-input').value = '';
+                template.querySelector('.part-qty-input').value = '';
                 partsContainer.appendChild(template);
                 attachPartEvents(template);
             });
@@ -140,10 +172,14 @@
                     const option = select.options[select.selectedIndex];
                     const price = option.getAttribute('data-price') || 0;
                     priceDisplay.value = formatCurrency(price);
+                    row.querySelector('.part-id-input').value = select.value;
                     calculateTotals();
                 });
 
-                quantity.addEventListener('input', calculateTotals);
+                quantity.addEventListener('input', function() {
+                    row.querySelector('.part-qty-input').value = quantity.value;
+                    calculateTotals();
+                });
                 removeBtn.addEventListener('click', function() {
                     if (document.querySelectorAll('.parts-row').length > 1) {
                         row.remove();
@@ -195,4 +231,5 @@
             }
         });
     </script>
+}
 }

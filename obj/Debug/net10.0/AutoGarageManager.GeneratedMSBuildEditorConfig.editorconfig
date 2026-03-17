@@ -19,229 +19,233 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = AutoGarageManager
 build_property.RootNamespace = AutoGarageManager
-build_property.ProjectDir = d:\BTL_BACKEND (1)\AutoGarageManager\
+build_property.ProjectDir = D:\AutoGarageManager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\BTL_BACKEND (1)\AutoGarageManager
+build_property.MSBuildProjectDirectory = D:\AutoGarageManager
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/AccessDenied.cshtml]
+[D:/AutoGarageManager/Pages/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/Customers.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxDdXN0b21lcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/ExportReport.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/ExportReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxFeHBvcnRSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/Index.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/InvoiceDetails.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/InvoiceDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbnZvaWNlRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/Invoices.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/Invoices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxJbnZvaWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/Parts.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/Parts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxQYXJ0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/Reports.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/Reports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxSZXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Accountant/_AccountantLayout.cshtml]
+[D:/AutoGarageManager/Pages/Accountant/_AccountantLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudGFudFxfQWNjb3VudGFudExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Customers.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Customers/Create.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Customers/Delete.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Customers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Customers/Edit.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Employees.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Employees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Index.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Parts.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Parts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Permissions.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Permissions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGVybWlzc2lvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Reminders.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Reports.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Reports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVwb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Services.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Settings.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Vehicles.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Vehicles/Create.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Vehicles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Vehicles/Delete.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Vehicles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/Vehicles/Edit.cshtml]
+[D:/AutoGarageManager/Pages/Admin/Vehicles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVmVoaWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Admin/_AdminLayout.cshtml]
+[D:/AutoGarageManager/Pages/Admin/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cX0FkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/CreateVehicle.cshtml]
+[D:/AutoGarageManager/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AutoGarageManager/Pages/Customer/CreateVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQ3JlYXRlVmVoaWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/DeleteVehicle.cshtml]
+[D:/AutoGarageManager/Pages/Customer/DeleteVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGVsZXRlVmVoaWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/EditVehicle.cshtml]
+[D:/AutoGarageManager/Pages/Customer/EditVehicle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRWRpdFZlaGljbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/Index.cshtml]
+[D:/AutoGarageManager/Pages/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/Reminders.cshtml]
+[D:/AutoGarageManager/Pages/Customer/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/ServiceHistory.cshtml]
+[D:/AutoGarageManager/Pages/Customer/ServiceHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcU2VydmljZUhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/Support.cshtml]
+[D:/AutoGarageManager/Pages/Customer/Support.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcU3VwcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/Vehicles.cshtml]
+[D:/AutoGarageManager/Pages/Customer/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Customer/_CustomerLayout.cshtml]
+[D:/AutoGarageManager/Pages/Customer/_CustomerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcX0N1c3RvbWVyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Error.cshtml]
+[D:/AutoGarageManager/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Index.cshtml]
+[D:/AutoGarageManager/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Login.cshtml]
+[D:/AutoGarageManager/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Logout.cshtml]
+[D:/AutoGarageManager/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/CreateService.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/CreateService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcQ3JlYXRlU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/Index.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/ProcessImprovements.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/ProcessImprovements.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcUHJvY2Vzc0ltcHJvdmVtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/Reminders.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/Reminders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcUmVtaW5kZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/ServiceDetails.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/ServiceDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcU2VydmljZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/ServiceHistory.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/ServiceHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcU2VydmljZUhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/Vehicles.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/Vehicles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcVmVoaWNsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Mechanic/_MechanicLayout.cshtml]
+[D:/AutoGarageManager/Pages/Mechanic/_MechanicLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaGFuaWNcX01lY2hhbmljTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Privacy.cshtml]
+[D:/AutoGarageManager/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Profile.cshtml]
+[D:/AutoGarageManager/Pages/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Register.cshtml]
+[D:/AutoGarageManager/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/AutoGarageManager/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/_ViewImports.cshtml]
+[D:/AutoGarageManager/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/_ViewStart.cshtml]
+[D:/AutoGarageManager/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/BTL_BACKEND (1)/AutoGarageManager/Pages/Shared/_Layout.cshtml]
+[D:/AutoGarageManager/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a2f5e3ih9c

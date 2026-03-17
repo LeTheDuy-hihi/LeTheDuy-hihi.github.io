@@ -8,7 +8,8 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="h4 mb-0">Quản lý xe</h2>
     <div>
-        <input type="text" id="searchInput" class="form-control d-inline-block w-auto" placeholder="Tìm biển số xe..." />
+        <input type="text" id="searchInput" class="form-control d-inline-block w-auto"
+               placeholder="Tìm biển số xe..." />
     </div>
 </div>
 
@@ -30,7 +31,7 @@
                     <tr>
                         <td>@vehicle.LicensePlate</td>
                         <td>@vehicle.Model</td>
-                        <td>@vehicle.Customer.FullName</td>
+                        <td>@vehicle.Customer?.FullName</td>
                         <td>
                             @{
                                 var lastService = Model.LastServices.FirstOrDefault(ls => ls.VehicleId == vehicle.Id);
@@ -45,8 +46,10 @@
                             }
                         </td>
                         <td>
-                            <a class="text-decoration-none me-2" asp-page="/Mechanic/ServiceHistory" asp-route-vehicleId="@vehicle.Id">Lịch sử</a>
-                            <a class="text-decoration-none" asp-page="/Mechanic/CreateService" asp-route-vehicleId="@vehicle.Id">Sửa xe</a>
+                            <a class="text-decoration-none me-2" asp-page="/Mechanic/ServiceHistory"
+                               asp-route-vehicleId="@vehicle.Id">Lịch sử</a>
+                            <a class="text-decoration-none" asp-page="/Mechanic/CreateService"
+                               asp-route-vehicleId="@vehicle.Id">Sửa xe</a>
                         </td>
                     </tr>
                 }
@@ -63,21 +66,21 @@
 
 @section Scripts {
     <script>
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const filter = this.value.toLowerCase();
-            const rows = document.querySelectorAll('#vehiclesTable tbody tr');
+            document.getElementById('searchInput').addEventListener('input', function () {
+                const filter = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#vehiclesTable tbody tr');
 
-            rows.forEach(row => {
-                const licensePlate = row.cells[0].textContent.toLowerCase();
-                const model = row.cells[1].textContent.toLowerCase();
-                const owner = row.cells[2].textContent.toLowerCase();
+                rows.forEach(row => {
+                    const licensePlate = row.cells[0].textContent.toLowerCase();
+                    const model = row.cells[1].textContent.toLowerCase();
+                    const owner = row.cells[2].textContent.toLowerCase();
 
-                if (licensePlate.includes(filter) || model.includes(filter) || owner.includes(filter)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
+                    if (licensePlate.includes(filter) || model.includes(filter) || owner.includes(filter)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
             });
-        });
     </script>
 }

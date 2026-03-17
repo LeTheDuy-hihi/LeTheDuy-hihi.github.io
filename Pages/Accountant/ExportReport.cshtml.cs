@@ -28,9 +28,9 @@ public class ExportReportModel : PageModel
             var monthStart = new DateTime(now.Year, now.Month, 1);
             var monthEnd = monthStart.AddMonths(1);
 
-            var services = await _context.ServiceHistories
+            var services = await _context!.ServiceHistories
                 .Include(s => s.Vehicle)
-                    .ThenInclude(v => v.Customer)
+                    .ThenInclude(v => v!.Customer)
                 .Include(s => s.Mechanic)
                 .Where(s => s.ServiceDate >= monthStart && s.ServiceDate < monthEnd)
                 .OrderBy(s => s.ServiceDate)

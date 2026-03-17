@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {}
+    "D:\\AutoGarageManager\\AutoGarageManager.csproj": {}
   },
   "projects": {
-    "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj": {
+    "D:\\AutoGarageManager\\AutoGarageManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectUniqueName": "D:\\AutoGarageManager\\AutoGarageManager.csproj",
         "projectName": "AutoGarageManager",
-        "projectPath": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\AutoGarageManager.csproj",
+        "projectPath": "D:\\AutoGarageManager\\AutoGarageManager.csproj",
         "packagesPath": "C:\\Users\\Lapto\\.nuget\\packages\\",
-        "outputPath": "d:\\BTL_BACKEND (1)\\AutoGarageManager\\obj\\",
+        "outputPath": "D:\\AutoGarageManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lapto\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -75,6 +75,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.5, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[7.14.3, )"
             }
           },
           "imports": [

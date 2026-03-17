@@ -1,5 +1,6 @@
 using AutoGarageManager.Data;
 using AutoGarageManager.Models;
+using AutoGarageManager.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,8 +28,14 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/AccessDenied";
 });
 
+// Add SMS Service
+builder.Services.AddScoped<ISmsService, TwilioSmsService>();
+
 // Add Razor Pages
 builder.Services.AddRazorPages();
+
+// Start maintenance reminder job daily
+builder.Services.AddHostedService<MaintenanceReminderService>();
 
 var app = builder.Build();
 

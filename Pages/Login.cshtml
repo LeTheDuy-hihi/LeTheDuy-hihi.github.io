@@ -4,17 +4,26 @@
     ViewData["Title"] = "Đăng nhập";
 }
 
-<div class="container">
-    <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-md-8 col-lg-6">
-            <!-- Demo Account Info -->
-            <div class="card shadow mb-4 border-primary">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-info-circle me-2"></i>Tài khoản demo (sử dụng để đăng nhập nhanh)
-                    </h5>
-                </div>
-                <div class="card-body">
+<section class="login-hero">
+    <div class="login-hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="login-wrap">
+        <div class="login-card">
+            <div class="login-card-header">
+                <h2><i class="fas fa-lock me-2"></i>Đăng nhập</h2>
+                <p class="text-muted mb-0">Sử dụng tài khoản mẫu hoặc đăng ký để bắt đầu.</p>
+            </div>
+
+            <div class="login-card-body">
+                <div class="login-demo mb-4">
+                    <div class="login-demo-header">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Tài khoản demo (đăng nhập nhanh)
+                    </div>
                     <div class="table-responsive">
                         <table class="table mb-0">
                             <thead class="table-light">
@@ -40,79 +49,63 @@
                                     <td><code class="bg-light px-2 py-1 rounded">accountant@garage.com</code></td>
                                     <td><code class="bg-light px-2 py-1 rounded">Acc123!</code></td>
                                 </tr>
-                    
                             </tbody>
                         </table>
                     </div>
-                    <div class="mt-3">
-                        <small class="text-muted">
-                            <i class="fas fa-lightbulb me-1"></i>
-                            Chọn role phù hợp để vào trang riêng của role đó.
-                        </small>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Login Form -->
-            <div class="card shadow">
-                <div class="card-header bg-white">
-                    <h4 class="card-title mb-0 text-center">
-                        <i class="fas fa-sign-in-alt me-2 text-primary"></i>Đăng nhập
-                    </h4>
-                </div>
-                <div class="card-body">
-                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                    {
-                        <div class="alert alert-danger" role="alert">
-                            <i class="fas fa-exclamation-triangle me-2"></i>
-                            @Model.ErrorMessage
-                        </div>
-                    }
-
-                    <form method="post">
-                        <div class="mb-3">
-                            <label asp-for="Email" class="form-label">
-                                <i class="fas fa-envelope me-1"></i>Email
-                            </label>
-                            <input asp-for="Email" class="form-control form-control-lg" placeholder="Nhập email của bạn" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label asp-for="Password" class="form-label">
-                                <i class="fas fa-lock me-1"></i>Mật khẩu
-                            </label>
-                            <input asp-for="Password" class="form-control form-control-lg" type="password" placeholder="Nhập mật khẩu" />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-                        </div>
-                        <div class="mb-4 form-check">
-                            <input asp-for="RememberMe" class="form-check-input" />
-                            <label asp-for="RememberMe" class="form-check-label">
-                                <i class="fas fa-clock me-1"></i>Ghi nhớ đăng nhập
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">
-                            <i class="fas fa-sign-in-alt me-2"></i>Đăng nhập
-                        </button>
-                    </form>
-
-                    <hr class="my-4">
-
-                    <div class="text-center">
-                        <small class="text-muted">
-                            <i class="fas fa-question-circle me-1"></i>
-                            Chưa có tài khoản?
-                            <a href="/Register" class="text-decoration-none">
-                                <strong>Đăng ký ngay</strong>
-                            </a>
-                        </small>
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        @Model.ErrorMessage
                     </div>
+                }
+
+                <form method="post" class="login-form">
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">
+                            <i class="fas fa-envelope me-1"></i>Email
+                        </label>
+                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Nhập email của bạn" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">
+                            <i class="fas fa-lock me-1"></i>Mật khẩu
+                        </label>
+                        <input asp-for="Password" class="form-control form-control-lg" type="password"
+                               placeholder="Nhập mật khẩu" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4 form-check">
+                        <input asp-for="RememberMe" class="form-check-input" />
+                        <label asp-for="RememberMe" class="form-check-label">
+                            <i class="fas fa-clock me-1"></i>Ghi nhớ đăng nhập
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fas fa-sign-in-alt me-2"></i>Đăng nhập
+                    </button>
+                </form>
+
+                <div class="text-center mt-4">
+                    <small class="text-muted">
+                        <i class="fas fa-question-circle me-1"></i>
+                        Chưa có tài khoản?
+                        <a href="/Register" class="text-decoration-none">
+                            <strong>Đăng ký ngay</strong>
+                        </a>
+                    </small>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-
